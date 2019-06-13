@@ -26,13 +26,47 @@ import {AddMedia,Home,Likes,Profile,Search} from '~/components/router';
 
 export default MainScrean;
 
-const BottomTabNavigator = createBottomTabNavigator({
-  HomeTab:Home,
-  SearchTab:Search,
-  AddMediaTab:AddMedia,
-  LikesTab:Likes,
-  ProfileTab:Profile
-})
+const BottomTabNavigator = createBottomTabNavigator(
+  {
+    HomeTab:Home,
+    SearchTab:Search,
+    AddMediaTab:AddMedia,
+    LikesTab:Likes,
+    ProfileTab:Profile
+  } ,
+  {
+    animationEnabled:true,
+    swipeEnabled:true,
+    tabBarPosition:'bottom',
+    tabBarOptions:{
+      activeTintColor:'#000',
+      inactiveTintColor:'#d1cece',
+      style:{
+        backgroundColor:'#fff'
+      },
+      showLabel:false,
+      showIcon:true
+    },
+    defaultNavigationOptions: ({navigation}) => ({
+      tabBarIcon: ({focused, horizontal, tintColor}) => {
+          const {routeName} = navigation.state;
+          let IconComponent = Ionicons;
+          let iconName ='';
+          
+          if(routeName === 'HomeTab'){
+            iconName = 'ios-home';
+          }
+          else if (routeName === 'SearchTab'){
+            iconName = 'ios-search';
+          }
+          else if (routeName === 'Details'){
+            iconName = 'ios-add';
+          }
+          return <IconComponent name={iconName} size={35} color={tintColor} />;
+      }
+    })
+  }
+)
 
 const AppContainer = createAppContainer(BottomTabNavigator);
 

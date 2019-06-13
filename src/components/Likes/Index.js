@@ -1,8 +1,17 @@
 import React,{Component} from 'react';
 import {View,StyleSheet, Text} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import Style from './Style';
 
  class Likes extends Component{
+
+    static navigationOptions = {
+        tabBarIcon:({focused, tintcolor}) =>(
+           <Icon name="ios-heart" size={30} color={tintcolor}/>
+        ),
+      }
+
   render(){
     return(
       <View style={styles.container}>
