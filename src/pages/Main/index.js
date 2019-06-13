@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import {View,StyleSheet, Text} from 'react-native';
-import {TabNavigator} from 'react-navigation'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import {createBottomTabNavigator,createAppContainer} from 'react-navigation'
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {AddMedia,Home,Likes,Profile,Search} from '~/components/router';
 
  class MainScrean extends Component{
 
@@ -16,14 +17,24 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
   render(){
     return(
-      <View style={styles.container}>
-        <Text style={{fontSize:40,color:'#fc0'}}>Main Screan</Text>
-      </View>
+      <>
+        <AppContainer/>
+      </>
     );
   }
 }
 
 export default MainScrean;
+
+const BottomTabNavigator = createBottomTabNavigator({
+  HomeTab:Home,
+  SearchTab:Search,
+  AddMediaTab:AddMedia,
+  LikesTab:Likes,
+  ProfileTab:Profile
+})
+
+const AppContainer = createAppContainer(BottomTabNavigator);
 
 const styles=StyleSheet.create({
     container:{
