@@ -6,12 +6,6 @@ import Style from './Style';
 
  class Search extends Component{
 
-  static navigationOptions = {
-    tabBarIcon:({focused, tintcolor}) =>(
-       <Icon name="ios-search" size={30} color={tintcolor} />
-    ),
-  }
-
   render(){
     return(
       <View style={styles.container}>

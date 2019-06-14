@@ -6,12 +6,6 @@ import Style from './Style';
 
  class AddMedia extends Component{
 
-  static navigationOptions = {
-    tabBarIcon:({focused, tintcolor}) =>(
-       <Icon name="ios-add-circle" size={30} color={tintcolor}/>
-    ),
-  }
-
   render(){
     return(
       <View style={styles.container}>

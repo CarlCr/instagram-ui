@@ -6,12 +6,6 @@ import Style from './Style';
 
  class Profile extends Component{
 
-  static navigationOptions = {
-    tabBarIcon:({focused, tintcolor}) =>(
-       <Icon name="ios-person" size={30} color={tintcolor} />
-    ),
-  }
-
   render(){
     return(
       <View style={styles.container}>
