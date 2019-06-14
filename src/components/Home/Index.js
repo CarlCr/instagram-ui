@@ -27,10 +27,10 @@ import CardComponent from '~/shared/CardComponent/'
        <Container style={styles.container}>
          <Content>
           <View style={{height:100}}>
-            <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingHorizontal:10}}>
+            <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingTop:5,paddingHorizontal:10,paddingBottom:10}}>
                 <Text style={{fontWeight:'bold'}}>Stories</Text>
-                <View style={{flexDirection:'row',alignContent:'center'}}>
-                  <Icon name="md-play" style={{fontSize:14}}/>
+                <View style={{flexDirection:'row',alignItems:'center'}}>
+                  <Icon name="md-play" style={{fontSize:14,marginRight:3}}/>
                   <Text style={{fontWeight:'bold'}}>Watch All</Text>
                 </View>
             </View>
