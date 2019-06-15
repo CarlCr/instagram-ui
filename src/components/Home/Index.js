@@ -1,12 +1,10 @@
 import React,{Component} from 'react';
-import {View,StyleSheet, Text, ScrollView} from 'react-native';
+import {View,StyleSheet, Text, ScrollView,StatusBar} from 'react-native';
 import Style from './Style';
-import {Container, Content,Icon} from 'native-base';
-import {Thumbnail} from 'native-base'
+import {Thumbnail,Container,Content,Icon,Header,Left,Right,Body} from 'native-base'
 import CardComponent from '~/shared/CardComponent/'
 
  class Home extends Component{
- 
 
   render(){
 
@@ -23,8 +21,17 @@ import CardComponent from '~/shared/CardComponent/'
       "10":require('~/assets/img/stories/img10.jpg'),
     }
 
+
     return(
        <Container style={styles.container}>
+         <View style={{flexDirection:'row',height:40, backgroundColor:'#fff'}}>
+           <View><Icon name="ios-camera"  style={{paddingLeft:10}} /></View>
+            <View style={{flex:1}}>
+              <Text style={{color:'#000',fontSize:22,textAlign:'center',fontWeight:'500'}}>Instagram</Text>
+            </View>
+            <View><Icon name="ios-send" style={{paddingRight:10}} /></View> 
+         </View>
+
          <Content>
           <View style={{height:100}}>
             <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingTop:5,paddingHorizontal:10,paddingBottom:10}}>

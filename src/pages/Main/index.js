@@ -8,14 +8,17 @@ import {AddMedia,Home,Likes,Profile,Search} from '~/components/router';
  class MainScrean extends Component{
 
   static navigationOptions = {
-    headerLeft: <Icon name="ios-camera"  style={{paddingLeft:10}} />,
-    headerTitle:<View style={{flex:1}}>
-      <Text style={{color:'#000',fontSize:22,textAlign:'center',fontWeight:'500'}}>Instagram</Text>
-    </View>,
-    headerRight:<Icon name="ios-send" style={{paddingRight:10}} />,
-    headerStyle:{
-      border:'none',
-    }
+
+    // headerLeft: <Icon name="ios-camera"  style={{paddingLeft:10}} />,
+    // headerTitle:<View style={{flex:1}}>
+    //   <Text style={{color:'#000',fontSize:22,textAlign:'center',fontWeight:'500'}}>Instagram</Text>
+    // </View>,
+    // headerRight:<Icon name="ios-send" style={{paddingRight:10}} />,
+    // headerStyle:{
+    //   border:'none',
+    // }
+
+    header:null
 
   }
 

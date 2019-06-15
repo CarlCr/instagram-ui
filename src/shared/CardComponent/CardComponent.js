@@ -7,6 +7,7 @@ import * as styles from './CardComponent.styles';
 
  
 class  CardComponent extends Component{
+  
   render(){
 
     const images = {
