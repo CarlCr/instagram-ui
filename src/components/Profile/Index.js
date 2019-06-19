@@ -17,7 +17,9 @@ var images = [
     require('~/assets/img/stories/img9.jpg'),
     require('~/assets/img/stories/img10.jpg'),
     require('~/assets/img/stories/img5.jpg'),
-    require('~/assets/img/stories/img3.jpg'),
+    require('~/assets/img/stories/img7.jpg'),
+    require('~/assets/img/stories/img1.jpg'),
+    require('~/assets/img/stories/img9.jpg'),
 ]
 
 var {width,height}= Dimensions.get('window');
