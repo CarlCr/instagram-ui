@@ -1,4 +1,4 @@
-package com.Instagram;
+package com.MwangoleSolidario;
 
 import android.app.Application;
 

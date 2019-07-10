@@ -1,22 +1,12 @@
 import React,{Component} from 'react';
-import {View,StyleSheet, Text} from 'react-native';
 import {createBottomTabNavigator,createAppContainer} from 'react-navigation'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Icon} from 'native-base';
-import {AddMedia,Home,Likes,Profile,Search} from '~/components/router';
+import {AddMedia,Home,Notification,Profile,Search} from '~/components/router';
+import {Icon} from 'native-base'
 
  class MainScrean extends Component{
 
   static navigationOptions = {
-
-    // headerLeft: <Icon name="ios-camera"  style={{paddingLeft:10}} />,
-    // headerTitle:<View style={{flex:1}}>
-    //   <Text style={{color:'#000',fontSize:22,textAlign:'center',fontWeight:'500'}}>Instagram</Text>
-    // </View>,
-    // headerRight:<Icon name="ios-send" style={{paddingRight:10}} />,
-    // headerStyle:{
-    //   border:'none',
-    // }
 
     header:null
 
@@ -38,15 +28,15 @@ const BottomTabNavigator = createBottomTabNavigator(
     HomeTab:Home,
     SearchTab:Search,
     AddMediaTab:AddMedia,
-    LikesTab:Likes,
+    NotificationTab:Notification,
     ProfileTab:Profile
-  } ,
+  },
   {
     animationEnabled:true,
     swipeEnabled:true,
     tabBarPosition:'bottom',
     tabBarOptions:{
-      activeTintColor:'#000',
+      activeTintColor:'#ff3600',
       inactiveTintColor:'#d1cece',
       style:{
         backgroundColor:'#fff'
@@ -72,23 +62,13 @@ const BottomTabNavigator = createBottomTabNavigator(
           else if (routeName === 'AddMediaTab'){
             iconName = 'ios-add-circle';
           }
-          else if (routeName === 'LikesTab'){
-            iconName = 'ios-heart';
+          else if (routeName === 'NotificationTab'){
+            iconName = 'ios-notifications';
           }
-          return <IconComponent name={iconName} size={35} color={tintColor} />;
+          return <IconComponent name={iconName} size={30} color={tintColor} />;
       }
     })
   }
 )
 
 const AppContainer = createAppContainer(BottomTabNavigator);
-
-const styles=StyleSheet.create({
-    container:{
-      flex:1,
-      backgroundColor:'#fff',
-      alignItems:'center',
-      justifyContent:'center',
-      
-    }
-});

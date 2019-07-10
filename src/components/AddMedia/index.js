@@ -8,8 +8,10 @@ import Style from './Style';
 
   render(){
     return(
-      <View style={styles.container}>
-        <Text style={styles.title}> AddMedia </Text>
+      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+        <Text style={{color:'#333',fontSize:16}}>
+          Sem ligação à internet
+        </Text>
       </View>
     );
   }

@@ -4,18 +4,20 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Style from './Style';
 
- class Likes extends Component{
+ class Notification extends Component{
  
   render(){
     return(
-      <View style={styles.container}>
-        <Text style={styles.title}> Likes </Text>
+      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+          <Text style={{color:'#333',fontSize:16}}>
+            Sem ligação à internet
+          </Text>
       </View>
     );
   }
 }
 
-export default Likes;
+export default Notification;
 
 const styles=StyleSheet.create({
     container:{
